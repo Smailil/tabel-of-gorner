@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 	int x,b,p=0,k=1,la=-1;
-	cout << "Max Ctepen: "
+	cout << "Max Ctepen: ";
 	cin >> x;
 	int atat[x];
 	x++;
