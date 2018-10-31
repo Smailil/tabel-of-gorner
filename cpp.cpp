@@ -2,8 +2,10 @@
 using namespace std;
 int main()
 {
-	int x,b,p=0,k=1;
+	int x,b,p=0,k=1,la=-1;
 	cin >> x;
+	int atat[x];
+	x++;
 	int arr[x];
 	for (int i=0; i<x; i++)
 	{
@@ -29,6 +31,14 @@ int main()
 					b=b+arr[l];
 					cout << " " << b;
 						b=b*i*k;
+						if (b==0)
+						{
+							la++;
+							if (k==1)
+								atat[la]=i;
+							else
+								atat[la]=i*k;
+						}
 				}
 				p++;
 				k*=(-1);
@@ -36,6 +46,11 @@ int main()
 			}
 		p=0;
 		}
+	}
+	cout << endl;
+	for(int i=0; i<x-1; i++)
+	{
+		cout << "x" << 1+i << " = " << atat[i] << ", ";
 	}
 }
 
